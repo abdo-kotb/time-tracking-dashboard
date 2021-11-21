@@ -25,9 +25,9 @@ Users should be able to:
 
 ### Screenshot
 
-- Desktop Design (https://user-images.githubusercontent.com/86558336/142766167-bfa9db6e-eeba-410d-b7b1-bfe52165f18c.png)
+- Desktop Design ![Desktop Desing](https://user-images.githubusercontent.com/86558336/142766326-0a7fc6ed-2b5d-4378-a7d0-4ab18d35cbc0.png)
 
-- Mobile Design (https://user-images.githubusercontent.com/86558336/142766213-b9f13d8f-1ed6-40bb-8941-e9a32d359719.png)
+- Mobile Design ![Mobile Design](https://user-images.githubusercontent.com/86558336/142766213-b9f13d8f-1ed6-40bb-8941-e9a32d359719.png)
 
 
 ### Links
