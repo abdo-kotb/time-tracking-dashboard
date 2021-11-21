@@ -43,6 +43,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- CSS Animation
 - Desktop-first workflow
 - JavaScript
 - ES6 Classes
