@@ -1,0 +1,307 @@
+:root {
+  --details: hsl(246, 80%, 60%);
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+  --body: hsl(226, 43%, 10%);
+  --main-color: hsl(235, 46%, 20%);
+  --main-color-hover: hsl(235, 46%, 35%);
+  --time-control: hsl(235, 45%, 61%);
+  --text: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  background-color: var(--body);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  height: 100vh;
+}
+
+.active {
+  color: #fff;
+}
+
+main {
+  width: 100rem;
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.4rem;
+}
+
+.controller {
+  background-color: var(--main-color);
+  grid-row: span 2;
+  border-radius: 15px;
+}
+
+.details {
+  background-color: var(--details);
+  padding: 2.4rem 0 8rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border-radius: 15px;
+}
+
+.person {
+  width: 5.6rem;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.sub {
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+.name {
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.time-control {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 2.4rem;
+  color: var(--time-control);
+  font-size: 1.6rem;
+}
+
+.time-control span {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.time-control span:hover {
+  color: #fff;
+}
+
+.card {
+  padding-top: 3.2rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 15px;
+}
+
+/* background color does not work properly because of [overflow: hidden]. Did not find a solution yet except of using [linear-gradient] */
+.card-work {
+  background-image: linear-gradient(
+    to bottom,
+    var(--work) 50%,
+    var(--main-color) 50%
+  );
+}
+
+.card-play {
+  background-image: linear-gradient(
+    to bottom,
+    var(--play) 50%,
+    var(--main-color) 50%
+  );
+}
+
+.card-study {
+  background-image: linear-gradient(
+    to bottom,
+    var(--study) 50%,
+    var(--main-color) 50%
+  );
+}
+
+.card-exercise {
+  background-image: linear-gradient(
+    to bottom,
+    var(--exercise) 50%,
+    var(--main-color) 50%
+  );
+}
+
+.card-social {
+  background-image: linear-gradient(
+    to bottom,
+    var(--social) 50%,
+    var(--main-color) 50%
+  );
+}
+
+.card-self-care {
+  background-image: linear-gradient(
+    to bottom,
+    var(--self-care) 50%,
+    var(--main-color) 50%
+  );
+}
+
+.card-icon {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 5.6rem;
+  z-index: -1;
+}
+
+.card-content {
+  background-color: var(--main-color);
+  padding: 2.4rem;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card-content:hover {
+  background-color: var(--main-color-hover);
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.6rem;
+  font-weight: 500;
+}
+
+.dots {
+  color: var(--text);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.dots:hover {
+  color: #fff;
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.4rem;
+}
+
+.now {
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.before {
+  font-size: 1.6rem;
+  color: var(--text);
+}
+
+.attribution {
+  font-size: 1.4rem;
+}
+
+.attribution a:link,
+.attribution a:visited {
+  color: var(--play);
+  text-decoration: none;
+  position: relative;
+}
+
+.attribution a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+  background-color: var(--play);
+}
+
+.attribution a:hover::after {
+  width: 100%;
+}
+
+/* Animation to time */
+/* ////////////////////////////////////////////////// */
+.pulse {
+  animation: pulse 1s linear 1;
+}
+
+@keyframes pulse {
+  25% {
+    transform: scale(1.05);
+  }
+
+  75% {
+    transform: scale(0.9);
+  }
+}
+
+/* MEDIA QUERIES */
+/* ////////////////////////////////////////////////// */
+/* for 992px */
+@media (max-width: 62em) {
+  html {
+    font-size: 53.25%;
+  }
+}
+
+@media (max-width: 48em) {
+  body {
+    height: auto;
+    margin-top: 6.4rem;
+    margin-bottom: 6.4rem;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    width: fit-content;
+  }
+
+  .details {
+    flex-direction: row;
+    padding: 3.6rem 2.4rem;
+  }
+
+  .name {
+    font-size: 3.6rem;
+  }
+
+  .time-control {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .time-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 23.5em) {
+  .name {
+    font-size: 2.4rem;
+  }
+
+  .time-container {
+    gap: 2.4rem;
+  }
+
+  .attribution {
+    font-size: 1.2rem;
+  }
+}
